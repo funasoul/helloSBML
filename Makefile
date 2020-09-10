@@ -2,7 +2,7 @@ PROG = helloSBML
 OBJS = main.o
 JSON = main.o.json
 CC = clang
-CFLAGS = -g -pthread -Wall -I./include
+CFLAGS = -g -Wall -I./include
 CQUERYFLAGS = -MJ $(JSON)
 LDFLAGS = -L./lib -Wl,--rpath -Wl,./lib -lsbml -lm
 
