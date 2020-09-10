@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sbml xmlns="http://www.sbml.org/sbml/level1" level="1" version="2">
+<model name="SimpleModel">
+<listOfCompartments>
+<compartment name="default" volume="1" units="volume"/>
+</listOfCompartments>
+<listOfSpecies>
+<species name="s1" compartment="default" initialAmount="1"/>
+<species name="s2" compartment="default" initialAmount="0"/>
+</listOfSpecies>
+<listOfReactions>
+<reaction name="re1" reversible="false">
+<listOfReactants>
+<speciesReference species="s1"/>
+</listOfReactants>
+<listOfProducts>
+<speciesReference species="s2"/>
+</listOfProducts>
+<kineticLaw formula="k * s1">
+<listOfParameters>
+<parameter name="k" value="0.5" units="substance"/>
+</listOfParameters>
+</kineticLaw>
+</reaction>
+</listOfReactions>
+</model>
+</sbml>

@@ -1,0 +1,3 @@
+[
+{ "directory": "/home/runner/helloSBML", "file": "main.c", "output": "main.o", "arguments": ["/usr/bin/clang-7", "-xc", "main.c", "-Wall", "-I", "./include", "-o", "main.o", "-c", "--target=x86_64-unknown-linux-gnu"]}
+]
