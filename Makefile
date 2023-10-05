@@ -4,11 +4,10 @@ JSON = main.o.json
 CC = clang
 CFLAGS = -g -Wall -I./include
 CQUERYFLAGS = -MJ $(JSON)
-LDFLAGS = -L./lib -Wl,--rpath -Wl,./lib -lsbml -lm
+LDFLAGS = -L./lib -Wl,--rpath -Wl,./lib -lsbml -lm -lz -lxml2 -lstdc++
 
 .PHONY: all
 all: $(PROG) compile_commands.json
-	./$(PROG)
 
 .SUFFIXES: .o .c
 .c.o:
@@ -19,6 +18,9 @@ compile_commands.json: $(JSON)
 
 $(PROG): $(OBJS)
 	$(CC) -o $@ $^ $(LDFLAGS)
+
+run: $(PROG)
+	./$(PROG)
 
 .PHONY: clean
 clean:
