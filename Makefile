@@ -19,6 +19,9 @@ compile_commands.json: $(JSON)
 $(PROG): $(OBJS)
 	$(CC) -o $@ $^ $(LDFLAGS)
 
+main-debug: $(OBJS)
+	$(CC) -o $@ $^ $(LDFLAGS)
+
 run: $(PROG)
 	./$(PROG)
 

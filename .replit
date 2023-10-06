@@ -1,5 +1,5 @@
-compile = "./make.sh"
-run = "./run.sh"
+compile = "make"
+run = "./helloSBML"
 hidden = ["main", "**/*.o", "**/*.d", ".ccls-cache", "Makefile"]
 
 [nix]

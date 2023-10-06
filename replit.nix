@@ -6,6 +6,6 @@
 		pkgs.gnumake
         pkgs.libxml2
         pkgs.glibc
-        pkgs.stdenv.cc.cc
+        pkgs.stdenv.cc.cc.lib
 	];
 }
